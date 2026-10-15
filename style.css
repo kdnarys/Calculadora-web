@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1c1b1b;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+.calculator {
+    background-color: #e4ec50;
+    width: 300px;  /* Largura fixa da calculadora */
+    border-radius: 10px; /* Arredondamento dos cantos externos */
+    padding: 20px;   /* Espaçamento interno entre a borda e o conteúdo */
+}
+
+#display { /* tela da calculadora */
+    width: 100%;  /* Ocupa toda a largura disponível do container */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total do display */
+    height: 60px;  /* Altura fixa da tela do display */
+    border: none; /* Remove as bordas padrão do campo */
+    border-radius: 6px; /* Arredondamento suave dos cantos do display */
+    background-color: #f0f0f0;
+    text-align: right;
+    font-size: 20px;  /* Tamanho da fonte dos números */
+    margin-bottom: 16px; /* Empurra os botões para baixo, criando um espaço */
+}
+
+.box-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Divide a grade em 4 colunas iguais */
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; /* Divide a grade em 5 linhas iguais */
+    gap: 10px; /* Cria um espaçamento automático de 10px entre os botões */
+}
+
+button { /* Estado normal do botão */
+    height: 60px; /* Altura fixa de cada botão */
+    border: none; /* Remove a borda padrão do navegador */
+    border-radius: 30px;  /* Arredondamento suave dos cantos do botão */
+    font-size: 20px;  /* Tamanho do texto/número dentro do botão */
+    transition: 0.3s; /* Deixa a mudança de cor suave */
+    
+}
+
+button:hover { /* Quando o mouse passa por cima */
+    cursor: pointer; /* Transforma a seta do mouse na "mãozinha" de clique */
+    background-color: #e1e1e1;
+
+
+}
+
+.btn-zero { /* Botão "0" */
+    grid-column: 1 / 3; /* Faz o botão ocupar duas colunas na grade */
+}
+
+.btn-result { /* Botão "=" */
+    grid-row: 4 / 6; /* Faz o botão ocupar duas linhas na grade */
+    height: 100%; /* Altura fixa do botão "=" */
+    grid-column: 4 / 5; /* Posiciona o botão "=" na quarta coluna da grade */
+}
